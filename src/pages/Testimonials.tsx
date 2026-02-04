@@ -140,12 +140,12 @@ const TestimonialsPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {displayedTestimonials.map((testimonial) => (
-              <div 
+              <div
                 key={testimonial.id}
                 className="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50 relative"
               >
                 <Quote className="absolute top-6 right-6 w-8 h-8 text-gold/20" />
-                
+
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -178,8 +178,8 @@ const TestimonialsPage = () => {
           {/* Pagination */}
           {totalPages > 1 && (
             <div className="flex justify-center gap-4">
-              <Button 
-                variant="gold-outline" 
+              <Button
+                variant="gold-outline"
                 size="icon"
                 onClick={() => setCurrentPage(p => Math.max(0, p - 1))}
                 disabled={currentPage === 0}
@@ -191,14 +191,13 @@ const TestimonialsPage = () => {
                   <button
                     key={i}
                     onClick={() => setCurrentPage(i)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      currentPage === i ? 'bg-gold' : 'bg-gold/30 hover:bg-gold/50'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-colors ${currentPage === i ? 'bg-gold' : 'bg-gold/30 hover:bg-gold/50'
+                      }`}
                   />
                 ))}
               </div>
-              <Button 
-                variant="gold-outline" 
+              <Button
+                variant="gold-outline"
                 size="icon"
                 onClick={() => setCurrentPage(p => Math.min(totalPages - 1, p + 1))}
                 disabled={currentPage === totalPages - 1}
@@ -210,40 +209,7 @@ const TestimonialsPage = () => {
         </div>
       </section>
 
-      {/* Video Testimonials */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
-              Témoignages Vidéo
-            </h2>
-            <p className="text-muted-foreground">
-              Découvrez les histoires de nos clients en vidéo.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {videoTestimonials.map((video) => (
-              <div 
-                key={video.id}
-                className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 cursor-pointer"
-              >
-                <div className="relative aspect-video bg-gradient-to-br from-charcoal to-charcoal-light">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-gold">
-                      <Play className="w-6 h-6 text-primary-foreground ml-1" />
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-foreground mb-1">{video.title}</h3>
-                  <p className="text-sm text-muted-foreground">{video.name}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20 bg-background">
@@ -253,7 +219,7 @@ const TestimonialsPage = () => {
               Rejoignez Notre Communauté de Clients Satisfaits
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Faites confiance à AUTOCONFIANCE pour votre prochain véhicule et 
+              Faites confiance à AUTOCONFIANCE pour votre prochain véhicule et
               découvrez pourquoi nos clients nous recommandent.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -262,9 +228,9 @@ const TestimonialsPage = () => {
                   Voir Nos Véhicules
                 </Button>
               </Link>
-              <Link to="/appointment">
+              <Link to="/contact">
                 <Button variant="gold-outline" size="xl">
-                  Prendre Rendez-vous
+                  Nous Contacter
                 </Button>
               </Link>
             </div>

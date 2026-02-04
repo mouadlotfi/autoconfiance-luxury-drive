@@ -19,12 +19,12 @@ const Header = () => {
 
   const navLinks = [
     { href: '/', label: 'Accueil' },
-    { 
-      href: '/about', 
+    {
+      href: '/about',
       label: 'À Propos',
     },
-    { 
-      href: '/cars', 
+    {
+      href: '/cars',
       label: 'Véhicules',
       children: [
         { href: '/cars?category=city', label: 'Citadines' },
@@ -33,17 +33,15 @@ const Header = () => {
         { href: '/compare', label: 'Comparer' },
       ]
     },
-    { 
-      href: '/services', 
+    {
+      href: '/services',
       label: 'Services',
       children: [
         { href: '/services', label: 'Tous nos services' },
         { href: '/finance', label: 'Financement' },
-        { href: '/appointment', label: 'Prendre RDV' },
       ]
     },
     { href: '/testimonials', label: 'Témoignages' },
-    { href: '/blog', label: 'Actualités' },
     { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -54,12 +52,11 @@ const Header = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-background/95 backdrop-blur-md shadow-card py-3' 
-          : 'bg-background/80 backdrop-blur-sm py-4'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? 'bg-background/95 backdrop-blur-md shadow-card py-3'
+        : 'bg-background/80 backdrop-blur-sm py-4'
+        }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
@@ -78,7 +75,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center gap-1">
             {navLinks.map((link) => (
-              <div 
+              <div
                 key={link.href}
                 className="relative"
                 onMouseEnter={() => link.children && setActiveDropdown(link.label)}
@@ -86,16 +83,15 @@ const Header = () => {
               >
                 <Link
                   to={link.href}
-                  className={`px-3 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-1 ${
-                    isActive(link.href)
-                      ? 'text-gold bg-gold/10'
-                      : 'text-foreground/80 hover:text-gold hover:bg-gold/5'
-                  }`}
+                  className={`px-3 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-1 ${isActive(link.href)
+                    ? 'text-gold bg-gold/10'
+                    : 'text-foreground/80 hover:text-gold hover:bg-gold/5'
+                    }`}
                 >
                   {link.label}
                   {link.children && <ChevronDown className="w-4 h-4" />}
                 </Link>
-                
+
                 {/* Dropdown */}
                 {link.children && activeDropdown === link.label && (
                   <div className="absolute top-full left-0 mt-1 bg-card rounded-xl shadow-card-hover border border-border/50 py-2 min-w-[200px] animate-fade-in">
@@ -116,15 +112,11 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden xl:flex items-center gap-4">
-            <a href="tel:+212600000000" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-gold transition-colors">
+            <a href="https://wa.me/212661299420" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-gold transition-colors">
               <Phone className="w-4 h-4 text-gold" />
-              <span>+212 6 00 00 00 00</span>
+              <span>+212 661-299420</span>
             </a>
-            <Link to="/appointment">
-              <Button variant="gold">
-                Prendre RDV
-              </Button>
-            </Link>
+
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -146,11 +138,10 @@ const Header = () => {
                   <Link
                     to={link.href}
                     onClick={() => !link.children && setIsMobileMenuOpen(false)}
-                    className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
-                      isActive(link.href)
-                        ? 'text-gold bg-gold/10'
-                        : 'text-foreground/80 hover:text-gold hover:bg-gold/5'
-                    }`}
+                    className={`block px-4 py-3 rounded-lg font-medium transition-colors ${isActive(link.href)
+                      ? 'text-gold bg-gold/10'
+                      : 'text-foreground/80 hover:text-gold hover:bg-gold/5'
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -172,15 +163,9 @@ const Header = () => {
               ))}
               <div className="flex items-center gap-2 text-muted-foreground text-sm py-3 px-4">
                 <Phone className="w-4 h-4 text-gold" />
-                <span>+212 6 00 00 00 00</span>
+                <span>+212 661-299420</span>
               </div>
-              <div className="px-4">
-                <Link to="/appointment" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="gold" className="w-full">
-                    Prendre RDV
-                  </Button>
-                </Link>
-              </div>
+
             </nav>
           </div>
         )}

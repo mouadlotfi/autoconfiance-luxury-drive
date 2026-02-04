@@ -14,7 +14,7 @@ const Footer = () => {
 
   const serviceLinks = [
     { label: 'Financement', href: '/finance' },
-    { label: 'Prendre RDV', href: '/appointment' },
+
     { label: 'Comparer Véhicules', href: '/compare' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Témoignages', href: '/testimonials' },
@@ -49,7 +49,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-cream/70 mb-6 leading-relaxed max-w-md">
-              Votre partenaire de confiance pour l'achat de véhicules d'occasion de qualité. 
+              Votre partenaire de confiance pour l'achat de véhicules d'occasion de qualité.
               Excellence, transparence et satisfaction client depuis plus de 10 ans.
             </p>
             {/* Social Links */}
@@ -73,7 +73,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <Link 
+                  <Link
                     to={link.href}
                     className="text-cream/70 hover:text-gold transition-colors duration-300"
                   >
@@ -90,7 +90,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
-                  <Link 
+                  <Link
                     to={link.href}
                     className="text-cream/70 hover:text-gold transition-colors duration-300"
                   >
@@ -108,21 +108,15 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-cream">+212 6 00 00 00 00</p>
+                  <p className="text-cream">+212 661-299420</p>
                   <p className="text-cream/50 text-sm">Lun-Sam: 9h-19h</p>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-cream">contact@autoconfiance.ma</p>
-                  <p className="text-cream/50 text-sm">Réponse sous 24h</p>
-                </div>
-              </li>
+
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-cream">Casablanca, Maroc</p>
+                  <p className="text-cream">Marrakech, Maroc</p>
                   <p className="text-cream/50 text-sm">Visitez notre showroom</p>
                 </div>
               </li>

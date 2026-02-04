@@ -3,13 +3,13 @@ import { Button } from '@/components/ui/button';
 import { useParams, Link } from 'react-router-dom';
 import { getCarById, cars } from '@/data/cars';
 import CarCard from '@/components/CarCard';
-import { 
-  ChevronLeft, 
-  ChevronRight, 
-  Check, 
-  Calendar, 
-  Gauge, 
-  Fuel, 
+import {
+  ChevronLeft,
+  ChevronRight,
+  Check,
+  Calendar,
+  Gauge,
+  Fuel,
   Settings,
   Shield,
   Phone,
@@ -82,8 +82,8 @@ const CarDetailPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="bg-gradient-to-br from-cream to-cream-dark rounded-2xl p-8 flex items-center justify-center">
-              <img 
-                src={car.image} 
+              <img
+                src={car.image}
                 alt={`${car.brand} ${car.name}`}
                 className="max-w-full max-h-80 object-contain"
               />
@@ -108,7 +108,7 @@ const CarDetailPage = () => {
               </h1>
 
               <p className="font-serif text-3xl font-bold text-gold mb-6">
-                {formatPrice(car.price)}
+                Contactez-nous pour le tarif
               </p>
 
               {/* Quick Specs */}
@@ -145,16 +145,16 @@ const CarDetailPage = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to={`/appointment?car=${car.id}`} className="flex-1">
+                <a href="tel:+212661299420" className="flex-1">
                   <Button variant="gold" size="xl" className="w-full">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Prendre RDV
-                  </Button>
-                </Link>
-                <a href="tel:+212600000000" className="flex-1">
-                  <Button variant="gold-outline" size="xl" className="w-full">
                     <Phone className="w-5 h-5 mr-2" />
                     Appeler
+                  </Button>
+                </a>
+                <a href="https://wa.me/212661299420" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <Button variant="gold-outline" size="xl" className="w-full">
+                    <MessageSquare className="w-5 h-5 mr-2" />
+                    WhatsApp
                   </Button>
                 </a>
               </div>
@@ -236,24 +236,18 @@ const CarDetailPage = () => {
                 </div>
 
                 <div className="space-y-4 mb-6">
-                  <Link to={`/appointment?car=${car.id}`}>
+                  <a href="tel:+212661299420">
                     <Button variant="gold" className="w-full" size="lg">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      Réserver un Essai
-                    </Button>
-                  </Link>
-                  <a href="tel:+212600000000">
-                    <Button variant="gold-outline" className="w-full" size="lg">
                       <Phone className="w-4 h-4 mr-2" />
-                      +212 6 00 00 00 00
+                      Appeler
                     </Button>
                   </a>
-                  <Link to="/contact">
-                    <Button variant="ghost" className="w-full">
+                  <a href="https://wa.me/212661299420" target="_blank" rel="noopener noreferrer">
+                    <Button variant="gold-outline" className="w-full" size="lg">
                       <MessageSquare className="w-4 h-4 mr-2" />
-                      Envoyer un Message
+                      WhatsApp
                     </Button>
-                  </Link>
+                  </a>
                 </div>
 
                 <Link to="/finance">

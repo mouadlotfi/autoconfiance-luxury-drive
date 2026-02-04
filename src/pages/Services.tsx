@@ -2,12 +2,12 @@ import Layout from '@/components/Layout';
 import PageHeader from '@/components/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { 
-  CreditCard, 
-  ClipboardCheck, 
-  Wrench, 
-  RefreshCw, 
-  Shield, 
+import {
+  CreditCard,
+  ClipboardCheck,
+  Wrench,
+  RefreshCw,
+  Shield,
   Truck,
   ChevronRight,
   CheckCircle
@@ -115,18 +115,18 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div 
+              <div
                 key={service.id}
                 className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2 border border-border/50"
               >
                 <div className="w-16 h-16 bg-gold/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
                   <service.icon className="w-8 h-8 text-gold" />
                 </div>
-                
+
                 <h3 className="font-serif text-xl font-bold text-foreground mb-3">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {service.description}
                 </p>
@@ -140,7 +140,7 @@ const ServicesPage = () => {
                   ))}
                 </ul>
 
-                <Link to={service.link}>
+                <Link to="/contact">
                   <Button variant="gold-outline" className="w-full group/btn">
                     <span>En savoir plus</span>
                     <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -160,15 +160,11 @@ const ServicesPage = () => {
               Prêt à Démarrer Votre Projet ?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Notre équipe est à votre disposition pour répondre à toutes vos questions 
+              Notre équipe est à votre disposition pour répondre à toutes vos questions
               et vous accompagner dans votre projet d'achat automobile.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/appointment">
-                <Button variant="gold" size="xl">
-                  Prendre Rendez-vous
-                </Button>
-              </Link>
+
               <Link to="/contact">
                 <Button variant="gold-outline" size="xl">
                   Nous Contacter

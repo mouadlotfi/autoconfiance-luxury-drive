@@ -7,8 +7,8 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
+        <img
+          src={heroImage}
           alt="AUTOCONFIANCE Luxury Showroom"
           className="w-full h-full object-cover"
         />
@@ -27,13 +27,13 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight opacity-0 animate-fade-in animation-delay-200">
-            L'Excellence 
+            L'Excellence
             <span className="block text-gold-gradient">Automobile</span>
             À Votre Portée
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed opacity-0 animate-fade-in animation-delay-400">
+          <p className="text-xl md:text-2xl text-white mb-10 max-w-2xl leading-relaxed opacity-0 animate-fade-in animation-delay-400">
             Chez AUTOCONFIANCE, nous ne vendons pas seulement des voitures — nous construisons des relations de confiance. Chaque véhicule est sélectionné avec soin pour garantir votre satisfaction.
           </p>
 
@@ -81,7 +81,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <a 
+      <a
         href="#about"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-gold transition-colors group"
       >

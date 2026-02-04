@@ -3,7 +3,7 @@ import PageHeader from '@/components/PageHeader';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { cars, carCategories, getCityCards, getSedans, getSuvs } from '@/data/cars';
+import { cars } from '@/data/cars';
 import CarCard from '@/components/CarCard';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
 
@@ -16,7 +16,7 @@ const CarsPage = () => {
   const [activeCategory, setActiveCategory] = useState<CategoryKey>(initialCategory);
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 500000]);
+
   const [yearRange, setYearRange] = useState<[number, number]>([2019, 2024]);
 
   const handleCategoryChange = (category: CategoryKey) => {
@@ -40,19 +40,16 @@ const CarsPage = () => {
     // Search filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(car => 
+      filtered = filtered.filter(car =>
         car.name.toLowerCase().includes(query) ||
         car.brand.toLowerCase().includes(query)
       );
     }
 
-    // Price filter
-    filtered = filtered.filter(car => 
-      car.price && car.price >= priceRange[0] && car.price <= priceRange[1]
-    );
+
 
     // Year filter
-    filtered = filtered.filter(car => 
+    filtered = filtered.filter(car =>
       car.year && car.year >= yearRange[0] && car.year <= yearRange[1]
     );
 
@@ -63,9 +60,10 @@ const CarsPage = () => {
 
   const categories = [
     { key: 'all' as CategoryKey, label: 'Tous', count: cars.length },
-    { key: 'city' as CategoryKey, label: 'Citadines', count: getCityCards().length },
-    { key: 'sedan' as CategoryKey, label: 'Berlines', count: getSedans().length },
-    { key: 'suv' as CategoryKey, label: 'SUV', count: getSuvs().length },
+    { key: 'city' as CategoryKey, label: 'Citadines', count: cars.filter(c => c.category === 'city').length },
+    { key: 'sedan' as CategoryKey, label: 'Berlines', count: cars.filter(c => c.category === 'sedan').length },
+    { key: 'suv' as CategoryKey, label: 'SUV', count: cars.filter(c => c.category === 'suv').length },
+    { key: 'utility' as CategoryKey, label: 'Utilitaires', count: cars.filter(c => c.category === 'utility').length },
   ];
 
   const formatPrice = (price: number) => {
@@ -99,8 +97,8 @@ const CarsPage = () => {
                 className="w-full pl-12 pr-4 py-3 bg-secondary border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
-            <Button 
-              variant="gold-outline" 
+            <Button
+              variant="gold-outline"
               className="md:w-auto"
               onClick={() => setShowFilters(!showFilters)}
             >
@@ -119,31 +117,7 @@ const CarsPage = () => {
                 </button>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-3">
-                    Prix: {formatPrice(priceRange[0])} - {formatPrice(priceRange[1])}
-                  </label>
-                  <div className="flex gap-4">
-                    <input
-                      type="range"
-                      min="0"
-                      max="500000"
-                      step="10000"
-                      value={priceRange[0]}
-                      onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-                      className="flex-1 accent-gold"
-                    />
-                    <input
-                      type="range"
-                      min="0"
-                      max="500000"
-                      step="10000"
-                      value={priceRange[1]}
-                      onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
-                      className="flex-1 accent-gold"
-                    />
-                  </div>
-                </div>
+
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-3">
                     Année: {yearRange[0]} - {yearRange[1]}
@@ -177,18 +151,16 @@ const CarsPage = () => {
               <button
                 key={category.key}
                 onClick={() => handleCategoryChange(category.key)}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                  activeCategory === category.key
-                    ? 'bg-gold-gradient text-primary-foreground shadow-gold'
-                    : 'bg-secondary text-foreground hover:bg-secondary/80'
-                }`}
+                className={`px-5 py-2.5 rounded-full font-medium transition-all ${activeCategory === category.key
+                  ? 'bg-gold-gradient text-primary-foreground shadow-gold'
+                  : 'bg-secondary text-foreground hover:bg-secondary/80'
+                  }`}
               >
                 {category.label}
-                <span className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
-                  activeCategory === category.key
-                    ? 'bg-primary-foreground/20'
-                    : 'bg-gold/10 text-gold'
-                }`}>
+                <span className={`ml-2 px-2 py-0.5 rounded-full text-xs ${activeCategory === category.key
+                  ? 'bg-primary-foreground/20'
+                  : 'bg-gold/10 text-gold'
+                  }`}>
                   {category.count}
                 </span>
               </button>
@@ -212,11 +184,11 @@ const CarsPage = () => {
               <p className="text-muted-foreground mb-4">
                 Aucun véhicule ne correspond à vos critères.
               </p>
-              <Button 
+              <Button
                 variant="gold-outline"
                 onClick={() => {
                   setSearchQuery('');
-                  setPriceRange([0, 500000]);
+
                   setYearRange([2019, 2024]);
                   setActiveCategory('all');
                 }}

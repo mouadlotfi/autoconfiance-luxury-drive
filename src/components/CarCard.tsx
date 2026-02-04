@@ -26,12 +26,12 @@ const CarCard = ({ car }: CarCardProps) => {
     <div className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2 border border-border/50">
       {/* Image Container */}
       <div className="relative h-52 bg-gradient-to-br from-cream to-cream-dark overflow-hidden">
-        <img 
-          src={car.image} 
+        <img
+          src={car.image}
           alt={`${car.brand} ${car.name}`}
           className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
         />
-        
+
         {/* Category Badge */}
         <div className="absolute top-4 right-4">
           <span className="px-3 py-1 bg-gold/90 text-primary-foreground text-xs font-semibold rounded-full uppercase tracking-wide shadow-lg">
@@ -61,7 +61,7 @@ const CarCard = ({ car }: CarCardProps) => {
           </div>
           <div className="text-right">
             <p className="font-serif text-xl font-bold text-gold">
-              {formatPrice(car.price)}
+              Contactez-nous
             </p>
           </div>
         </div>
@@ -104,11 +104,7 @@ const CarCard = ({ car }: CarCardProps) => {
               <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </Button>
           </Link>
-          <Link to={`/appointment?car=${car.id}`}>
-            <Button variant="gold">
-              RDV
-            </Button>
-          </Link>
+
         </div>
       </div>
     </div>

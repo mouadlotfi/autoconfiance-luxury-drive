@@ -1,32 +1,24 @@
 import { useState } from 'react';
-import { cars, carCategories, getCityCards, getSedans, getSuvs } from '@/data/cars';
+import { cars, carCategories } from '@/data/cars';
 import CarCard from './CarCard';
 import { Button } from '@/components/ui/button';
-import { Car, Briefcase, Mountain } from 'lucide-react';
+import { Car, Briefcase, Mountain, Truck } from 'lucide-react';
 
-type CategoryKey = 'city' | 'sedan' | 'suv';
+type CategoryKey = 'city' | 'sedan' | 'suv' | 'utility';
 
 const CarsSection = () => {
   const [activeCategory, setActiveCategory] = useState<CategoryKey>('city');
   const [showAll, setShowAll] = useState(false);
 
   const categories = [
-    { key: 'city' as CategoryKey, label: 'Citadines', icon: Car, count: getCityCards().length },
-    { key: 'sedan' as CategoryKey, label: 'Berlines', icon: Briefcase, count: getSedans().length },
-    { key: 'suv' as CategoryKey, label: 'SUV', icon: Mountain, count: getSuvs().length },
+    { key: 'city' as CategoryKey, label: 'Citadines', icon: Car, count: cars.filter(c => c.category === 'city').length },
+    { key: 'sedan' as CategoryKey, label: 'Berlines', icon: Briefcase, count: cars.filter(c => c.category === 'sedan').length },
+    { key: 'suv' as CategoryKey, label: 'SUV', icon: Mountain, count: cars.filter(c => c.category === 'suv').length },
+    { key: 'utility' as CategoryKey, label: 'Utilitaires', icon: Truck, count: cars.filter(c => c.category === 'utility').length },
   ];
 
   const getActiveCars = () => {
-    switch (activeCategory) {
-      case 'city':
-        return getCityCards();
-      case 'sedan':
-        return getSedans();
-      case 'suv':
-        return getSuvs();
-      default:
-        return [];
-    }
+    return cars.filter(car => car.category === activeCategory);
   };
 
   const activeCars = getActiveCars();
@@ -45,7 +37,7 @@ const CarsSection = () => {
             Des Véhicules d'Exception
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Découvrez notre sélection de véhicules soigneusement choisis. 
+            Découvrez notre sélection de véhicules soigneusement choisis.
             Chaque voiture a été inspectée et préparée pour vous offrir le meilleur.
           </p>
         </div>
@@ -59,19 +51,17 @@ const CarsSection = () => {
                 setActiveCategory(category.key);
                 setShowAll(false);
               }}
-              className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-300 ${
-                activeCategory === category.key
+              className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-300 ${activeCategory === category.key
                   ? 'bg-gold-gradient text-primary-foreground shadow-gold'
                   : 'bg-secondary text-foreground hover:bg-secondary/80'
-              }`}
+                }`}
             >
               <category.icon className="w-5 h-5" />
               <span>{category.label}</span>
-              <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
-                activeCategory === category.key
+              <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${activeCategory === category.key
                   ? 'bg-primary-foreground/20 text-primary-foreground'
                   : 'bg-gold/10 text-gold'
-              }`}>
+                }`}>
                 {category.count}
               </span>
             </button>
@@ -92,7 +82,7 @@ const CarsSection = () => {
         {/* Cars Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {displayedCars.map((car, index) => (
-            <div 
+            <div
               key={car.id}
               className="opacity-0 animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
@@ -105,8 +95,8 @@ const CarsSection = () => {
         {/* Show More Button */}
         {activeCars.length > 6 && (
           <div className="text-center">
-            <Button 
-              variant="gold-outline" 
+            <Button
+              variant="gold-outline"
               size="lg"
               onClick={() => setShowAll(!showAll)}
             >

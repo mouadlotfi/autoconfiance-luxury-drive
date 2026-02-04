@@ -10,8 +10,7 @@ import Testimonials from "./pages/Testimonials";
 import FAQ from "./pages/FAQ";
 import About from "./pages/About";
 import Finance from "./pages/Finance";
-import Blog from "./pages/Blog";
-import Appointment from "./pages/Appointment";
+
 import Compare from "./pages/Compare";
 import Cars from "./pages/Cars";
 import CarDetail from "./pages/CarDetail";
@@ -32,8 +31,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
           <Route path="/finance" element={<Finance />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/appointment" element={<Appointment />} />
+
           <Route path="/compare" element={<Compare />} />
           <Route path="/cars" element={<Cars />} />
           <Route path="/cars/:id" element={<CarDetail />} />

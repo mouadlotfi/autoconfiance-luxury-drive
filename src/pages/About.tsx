@@ -2,10 +2,10 @@ import Layout from '@/components/Layout';
 import PageHeader from '@/components/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { 
-  Target, 
-  Eye, 
-  Heart, 
+import {
+  Target,
+  Eye,
+  Heart,
   Award,
   Users,
   MapPin,
@@ -61,7 +61,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2010', event: 'Fondation d\'AUTOCONFIANCE à Casablanca' },
+  { year: '2010', event: 'Fondation d\'AUTOCONFIANCE à Marrakech' },
   { year: '2013', event: 'Ouverture du premier showroom moderne' },
   { year: '2016', event: 'Lancement du service financement' },
   { year: '2018', event: 'Cap des 500 clients satisfaits' },
@@ -98,12 +98,12 @@ const AboutPage = () => {
                 <h2 className="font-serif text-3xl font-bold text-foreground">Notre Mission</h2>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Transformer l'expérience d'achat de véhicules d'occasion au Maroc en établissant 
+                Transformer l'expérience d'achat de véhicules d'occasion au Maroc en établissant
                 de nouveaux standards de transparence, de qualité et de service client.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Nous croyons que chaque client mérite de connaître l'histoire complète de son 
-                futur véhicule, sans surprises ni zones d'ombre. C'est pourquoi nous avons 
+                Nous croyons que chaque client mérite de connaître l'histoire complète de son
+                futur véhicule, sans surprises ni zones d'ombre. C'est pourquoi nous avons
                 développé un processus d'inspection rigoureux et une politique de transparence totale.
               </p>
             </div>
@@ -115,12 +115,12 @@ const AboutPage = () => {
                 <h2 className="font-serif text-3xl font-bold text-foreground">Notre Vision</h2>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Devenir la référence incontournable du marché des véhicules d'occasion au Maroc, 
+                Devenir la référence incontournable du marché des véhicules d'occasion au Maroc,
                 reconnue pour son intégrité et la satisfaction de ses clients.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Nous aspirons à créer un écosystème où l'achat d'une voiture d'occasion est 
-                synonyme de sérénité, où la confiance entre le vendeur et l'acheteur est 
+                Nous aspirons à créer un écosystème où l'achat d'une voiture d'occasion est
+                synonyme de sérénité, où la confiance entre le vendeur et l'acheteur est
                 naturelle et où chaque client devient ambassadeur de notre marque.
               </p>
             </div>
@@ -142,7 +142,7 @@ const AboutPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 text-center"
               >
@@ -193,34 +193,46 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
-              Notre Équipe
+              Pourquoi Nous Choisir
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Des professionnels passionnés à votre service.
+              L'excellence et la confiance sont au cœur de notre engagement.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div 
-                key={index}
-                className="bg-card rounded-2xl p-6 shadow-card text-center"
-              >
-                <div className="w-24 h-24 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="font-serif text-3xl font-bold text-gold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="font-semibold text-foreground mb-1">{member.name}</h3>
-                <p className="text-gold text-sm mb-2">{member.role}</p>
-                <p className="text-muted-foreground text-sm">{member.bio}</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-card rounded-2xl p-8 shadow-card text-center group hover:bg-gold/5 transition-colors duration-300">
+              <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/20 transition-colors">
+                <CheckCircle className="w-8 h-8 text-gold" />
               </div>
-            ))}
+              <h3 className="font-serif text-xl font-bold text-foreground mb-4">Expertise Reconnue</h3>
+              <p className="text-muted-foreground">
+                Plus de 10 ans d'expérience dans le marché automobile marocain, avec une connaissance approfondie des marques et modèles.
+              </p>
+            </div>
+            <div className="bg-card rounded-2xl p-8 shadow-card text-center group hover:bg-gold/5 transition-colors duration-300">
+              <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/20 transition-colors">
+                <Target className="w-8 h-8 text-gold" />
+              </div>
+              <h3 className="font-serif text-xl font-bold text-foreground mb-4">Sélection Rigoureuse</h3>
+              <p className="text-muted-foreground">
+                Chaque véhicule est minutieusement inspecté et certifié pour garantir votre sécurité et votre satisfaction totale.
+              </p>
+            </div>
+            <div className="bg-card rounded-2xl p-8 shadow-card text-center group hover:bg-gold/5 transition-colors duration-300">
+              <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/20 transition-colors">
+                <Users className="w-8 h-8 text-gold" />
+              </div>
+              <h3 className="font-serif text-xl font-bold text-foreground mb-4">Service Client Premium</h3>
+              <p className="text-muted-foreground">
+                Un accompagnement personnalisé avant, pendant et après votre achat pour une expérience sans souci.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -234,7 +246,7 @@ const AboutPage = () => {
                 Certifications & Partenariats
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Notre engagement envers la qualité est reconnu par les organismes professionnels 
+                Notre engagement envers la qualité est reconnu par les organismes professionnels
                 et nos partenaires financiers.
               </p>
               <ul className="space-y-4">
