@@ -1,3 +1,11 @@
+// Car images mapping
+import suvDuster from '@/assets/cars/suv-duster.png';
+import cityClio from '@/assets/cars/city-clio.png';
+import cityGolf from '@/assets/cars/city-golf.png';
+import sedan508 from '@/assets/cars/sedan-508.png';
+import cityYaris from '@/assets/cars/city-yaris.png';
+import sedanCivic from '@/assets/cars/sedan-civic.png';
+
 export interface Car {
   id: string;
   name: string;
@@ -9,6 +17,11 @@ export interface Car {
   comfort: string;
   usage: string;
   image: string;
+  price?: number;
+  year?: number;
+  mileage?: number;
+  fuel?: string;
+  transmission?: string;
 }
 
 export const carCategories = {
@@ -29,7 +42,24 @@ export const carCategories = {
   }
 };
 
-type CarData = Omit<Car, 'image'>;
+// Map specific cars to images
+const carImageMap: Record<string, string> = {
+  'renault-clio': cityClio,
+  'volkswagen-golf': cityGolf,
+  'toyota-yaris': cityYaris,
+  'peugeot-508': sedan508,
+  'honda-civic': sedanCivic,
+  'dacia-duster': suvDuster,
+};
+
+// Default images per category
+const categoryDefaultImages: Record<string, string> = {
+  city: cityClio,
+  sedan: sedan508,
+  suv: suvDuster,
+};
+
+type CarData = Omit<Car, 'image' | 'price' | 'year' | 'mileage' | 'fuel' | 'transmission'>;
 
 const carData: CarData[] = [
   // City Cars & Compacts
@@ -565,11 +595,40 @@ const carData: CarData[] = [
   }
 ] as const;
 
-export const cars: Car[] = carData.map(car => ({
-  ...car,
-  image: `/placeholder.svg`
-}));
+// Generate random but consistent data for each car
+const generateCarData = (car: CarData, index: number): Car => {
+  const basePrice = car.category === 'suv' ? 180000 : car.category === 'sedan' ? 150000 : 80000;
+  const priceVariation = (index * 7919) % 50000;
+  
+  const years = [2019, 2020, 2021, 2022, 2023];
+  const yearIndex = (index * 3) % years.length;
+  
+  const mileageBase = car.category === 'city' ? 30000 : 50000;
+  const mileageVariation = ((index * 1337) % 40000);
+  
+  const fuels = ['Essence', 'Diesel', 'Hybride'];
+  const fuelIndex = index % fuels.length;
+  
+  const transmissions = ['Manuelle', 'Automatique'];
+  const transIndex = (index * 2) % transmissions.length;
+
+  // Get image - use specific image if available, otherwise use category default
+  const image = carImageMap[car.id] || categoryDefaultImages[car.category] || cityClio;
+
+  return {
+    ...car,
+    image,
+    price: basePrice + priceVariation,
+    year: years[yearIndex],
+    mileage: mileageBase + mileageVariation,
+    fuel: fuels[fuelIndex],
+    transmission: transmissions[transIndex],
+  };
+};
+
+export const cars: Car[] = carData.map((car, index) => generateCarData(car, index));
 
 export const getCityCards = () => cars.filter(car => car.category === 'city');
 export const getSedans = () => cars.filter(car => car.category === 'sedan');
 export const getSuvs = () => cars.filter(car => car.category === 'suv');
+export const getCarById = (id: string) => cars.find(car => car.id === id);

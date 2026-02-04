@@ -1,19 +1,29 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: 'Accueil', href: '#home' },
-    { label: 'À Propos', href: '#about' },
-    { label: 'Nos Véhicules', href: '#cars' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Accueil', href: '/' },
+    { label: 'À Propos', href: '/about' },
+    { label: 'Nos Véhicules', href: '/cars' },
+    { label: 'Services', href: '/services' },
+    { label: 'Contact', href: '/contact' },
+  ];
+
+  const serviceLinks = [
+    { label: 'Financement', href: '/finance' },
+    { label: 'Prendre RDV', href: '/appointment' },
+    { label: 'Comparer Véhicules', href: '/compare' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Témoignages', href: '/testimonials' },
   ];
 
   const carCategories = [
-    { label: 'Citadines', href: '#cars' },
-    { label: 'Berlines & Familiales', href: '#cars' },
-    { label: 'SUV & Crossovers', href: '#cars' },
+    { label: 'Citadines', href: '/cars?category=city' },
+    { label: 'Berlines & Familiales', href: '/cars?category=sedan' },
+    { label: 'SUV & Crossovers', href: '/cars?category=suv' },
   ];
 
   const socialLinks = [
@@ -27,20 +37,20 @@ const Footer = () => {
     <footer className="bg-charcoal text-cream">
       {/* Main Footer */}
       <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
-          <div className="lg:col-span-1">
-            <a href="#home" className="flex items-center gap-3 mb-6">
+          <div className="lg:col-span-2">
+            <Link to="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center shadow-gold">
                 <span className="font-serif text-xl font-bold text-primary-foreground">A</span>
               </div>
               <span className="font-serif text-2xl font-bold tracking-tight">
                 AUTO<span className="text-gold">CONFIANCE</span>
               </span>
-            </a>
-            <p className="text-cream/70 mb-6 leading-relaxed">
+            </Link>
+            <p className="text-cream/70 mb-6 leading-relaxed max-w-md">
               Votre partenaire de confiance pour l'achat de véhicules d'occasion de qualité. 
-              Excellence, transparence et satisfaction client.
+              Excellence, transparence et satisfaction client depuis plus de 10 ans.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -63,29 +73,29 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.href}
                     className="text-cream/70 hover:text-gold transition-colors duration-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Car Categories */}
+          {/* Services */}
           <div>
-            <h4 className="font-serif text-lg font-bold mb-6">Nos Véhicules</h4>
+            <h4 className="font-serif text-lg font-bold mb-6">Services</h4>
             <ul className="space-y-3">
-              {carCategories.map((link) => (
+              {serviceLinks.map((link) => (
                 <li key={link.label}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.href}
                     className="text-cream/70 hover:text-gold transition-colors duration-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -129,12 +139,12 @@ const Footer = () => {
               © {currentYear} AUTOCONFIANCE. Tous droits réservés.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-cream/50 hover:text-gold transition-colors">
+              <Link to="/legal" className="text-cream/50 hover:text-gold transition-colors">
                 Mentions Légales
-              </a>
-              <a href="#" className="text-cream/50 hover:text-gold transition-colors">
+              </Link>
+              <Link to="/privacy" className="text-cream/50 hover:text-gold transition-colors">
                 Politique de Confidentialité
-              </a>
+              </Link>
             </div>
           </div>
         </div>

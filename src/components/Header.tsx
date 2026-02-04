@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, MapPin } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,63 +18,119 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Accueil' },
-    { href: '#about', label: 'À Propos' },
-    { href: '#cars', label: 'Nos Véhicules' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/', label: 'Accueil' },
+    { 
+      href: '/about', 
+      label: 'À Propos',
+    },
+    { 
+      href: '/cars', 
+      label: 'Véhicules',
+      children: [
+        { href: '/cars?category=city', label: 'Citadines' },
+        { href: '/cars?category=sedan', label: 'Berlines' },
+        { href: '/cars?category=suv', label: 'SUV' },
+        { href: '/compare', label: 'Comparer' },
+      ]
+    },
+    { 
+      href: '/services', 
+      label: 'Services',
+      children: [
+        { href: '/services', label: 'Tous nos services' },
+        { href: '/finance', label: 'Financement' },
+        { href: '/appointment', label: 'Prendre RDV' },
+      ]
+    },
+    { href: '/testimonials', label: 'Témoignages' },
+    { href: '/blog', label: 'Actualités' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contact' },
   ];
+
+  const isActive = (href: string) => {
+    if (href === '/') return location.pathname === '/';
+    return location.pathname.startsWith(href.split('?')[0]);
+  };
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
           ? 'bg-background/95 backdrop-blur-md shadow-card py-3' 
-          : 'bg-transparent py-6'
+          : 'bg-background/80 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center shadow-gold group-hover:scale-105 transition-transform duration-300">
-              <span className="font-serif text-xl font-bold text-primary-foreground">A</span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 bg-gold-gradient rounded-full flex items-center justify-center shadow-gold group-hover:scale-105 transition-transform duration-300">
+              <span className="font-serif text-lg font-bold text-primary-foreground">A</span>
             </div>
             <div>
-              <span className="font-serif text-2xl font-bold text-foreground tracking-tight">
+              <span className="font-serif text-xl font-bold text-foreground tracking-tight">
                 AUTO<span className="text-gold-gradient">CONFIANCE</span>
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
+              <div 
                 key={link.href}
-                href={link.href}
-                className="text-foreground/80 hover:text-gold font-medium transition-colors duration-300 relative group"
+                className="relative"
+                onMouseEnter={() => link.children && setActiveDropdown(link.label)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-gradient transition-all duration-300 group-hover:w-full" />
-              </a>
+                <Link
+                  to={link.href}
+                  className={`px-3 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-1 ${
+                    isActive(link.href)
+                      ? 'text-gold bg-gold/10'
+                      : 'text-foreground/80 hover:text-gold hover:bg-gold/5'
+                  }`}
+                >
+                  {link.label}
+                  {link.children && <ChevronDown className="w-4 h-4" />}
+                </Link>
+                
+                {/* Dropdown */}
+                {link.children && activeDropdown === link.label && (
+                  <div className="absolute top-full left-0 mt-1 bg-card rounded-xl shadow-card-hover border border-border/50 py-2 min-w-[200px] animate-fade-in">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        to={child.href}
+                        className="block px-4 py-2 text-foreground/80 hover:text-gold hover:bg-gold/5 transition-colors"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
           {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center gap-6">
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
+          <div className="hidden xl:flex items-center gap-4">
+            <a href="tel:+212600000000" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-gold transition-colors">
               <Phone className="w-4 h-4 text-gold" />
               <span>+212 6 00 00 00 00</span>
-            </div>
-            <Button variant="gold" size="lg">
-              Prendre RDV
-            </Button>
+            </a>
+            <Link to="/appointment">
+              <Button variant="gold">
+                Prendre RDV
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-gold transition-colors"
+            className="xl:hidden p-2 text-foreground hover:text-gold transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -80,25 +139,48 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border/50">
-            <nav className="flex flex-col gap-4 pt-4">
+          <div className="xl:hidden mt-4 pb-4 border-t border-border/50 animate-fade-in">
+            <nav className="flex flex-col gap-1 pt-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-foreground/80 hover:text-gold font-medium transition-colors duration-300 py-2"
-                >
-                  {link.label}
-                </a>
+                <div key={link.href}>
+                  <Link
+                    to={link.href}
+                    onClick={() => !link.children && setIsMobileMenuOpen(false)}
+                    className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
+                      isActive(link.href)
+                        ? 'text-gold bg-gold/10'
+                        : 'text-foreground/80 hover:text-gold hover:bg-gold/5'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                  {link.children && (
+                    <div className="ml-4 border-l-2 border-gold/20 pl-4 mt-1 space-y-1">
+                      {link.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          to={child.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block py-2 text-sm text-muted-foreground hover:text-gold transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
-              <div className="flex items-center gap-2 text-muted-foreground text-sm py-2">
+              <div className="flex items-center gap-2 text-muted-foreground text-sm py-3 px-4">
                 <Phone className="w-4 h-4 text-gold" />
                 <span>+212 6 00 00 00 00</span>
               </div>
-              <Button variant="gold" className="mt-2">
-                Prendre RDV
-              </Button>
+              <div className="px-4">
+                <Link to="/appointment" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="gold" className="w-full">
+                    Prendre RDV
+                  </Button>
+                </Link>
+              </div>
             </nav>
           </div>
         )}
