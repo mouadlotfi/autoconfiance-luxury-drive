@@ -1,0 +1,722 @@
+[
+  {
+    "StartLine": 60,
+    "EndLine": 60,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'T-Roc', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+T-Roc' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'T-Roc', category: 'city', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.RUuauIqML8PgzNA_EQsnnAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 61,
+    "EndLine": 61,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Tiguan', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Tiguan' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Tiguan', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.vmXKqOXJij9JvRuHR5ANYQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 62,
+    "EndLine": 62,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Golf', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Golf' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Golf', category: 'city', imageUrl: 'https://th.bing.com/th/id/R.e9ea6a605fd058f7b19004b16b8a3472?rik=5AOPNaskTrlrCg&riu=http%3a%2f%2fwww.sembang-auto.com%2fwp-content%2fuploads%2f2012%2f09%2fVW-Golf-1.jpg&ehk=BrIX8fXAcvr4IjYYB64xACS%2fNdD5pXOspewkt%2fLup0I%3d&risl=&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 63,
+    "EndLine": 63,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Polo', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Polo' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Polo', category: 'city', imageUrl: 'https://cdn.motor1.com/images/mgl/oR3G4/s1/volkswagen-polo-2021.jpg' },"
+  },
+  {
+    "StartLine": 64,
+    "EndLine": 64,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Touareg', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Touareg' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Touareg', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP._om96gEiGveYvFhavL-6rwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 65,
+    "EndLine": 65,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Caddy', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Caddy' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Caddy', category: 'utility', imageUrl: 'https://carwow-uk-wp-3.imgix.net/THE-NEW-VOLKSWAGEN-CADDY-WORLD-PREMIERE-OF-THE-FOURTH-GENERATION-BEST-....jpg' },"
+  },
+  {
+    "StartLine": 66,
+    "EndLine": 66,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Taigo', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Taigo' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Taigo', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.5ee5004a44ceb9053693427a29aed579?rik=12JOF3ZmTh3gcA&riu=http%3a%2f%2fwww.autotrade.ie%2fwp-content%2fuploads%2f2021%2f07%2funnamed-19-scaled.jpg&ehk=pyjypEZqc%2fenqO%2b0SbKkZOwsgJWptAQEMgOdluzqnhQ%3d&risl=&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 67,
+    "EndLine": 67,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Passat', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Passat' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Passat', category: 'sedan', imageUrl: 'https://th.bing.com/th/id/OIP.scsOtq0Qrai5jgSsVMSJlgHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 68,
+    "EndLine": 68,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Amarok', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Amarok' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Amarok', category: 'utility', imageUrl: 'https://cdn.motor1.com/images/mgl/Yy2ye/s1/volkswagen-amarok-by-abit.jpg' },"
+  },
+  {
+    "StartLine": 69,
+    "EndLine": 69,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'ID.4', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+ID.4' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'ID.4', category: 'suv', imageUrl: 'https://uploads.vw-mms.de/system/production/images/vwn/074/687/images/88d94bf562b7fa86c054ae480249e93b69235964/DB2022AU00705_web_1600.jpg?1661959594' },"
+  },
+  {
+    "StartLine": 70,
+    "EndLine": 70,
+    "TargetContent": "{ brand: 'Volkswagen', model: 'Crafter', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Volkswagen+Crafter' },",
+    "ReplacementContent": "{ brand: 'Volkswagen', model: 'Crafter', category: 'utility', imageUrl: 'https://th.bing.com/th/id/R.df2d5ad7a1c54fec9e873d2d04012d1a?rik=yUf5bn65g0Wu3A&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 71,
+    "EndLine": 71,
+    "TargetContent": "{ brand: 'Audi', model: 'Q3', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Audi+Q3' },",
+    "ReplacementContent": "{ brand: 'Audi', model: 'Q3', category: 'suv', imageUrl: 'https://platform.cstatic-images.com/in/v2/stock_photos/011dc425-ac44-4185-9ca8-9f7813fecbfc/06db75fa-de5c-4526-854f-1dc6da7c0450.png' },"
+  },
+  {
+    "StartLine": 72,
+    "EndLine": 72,
+    "TargetContent": "{ brand: 'Audi', model: 'Q5', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Audi+Q5' },",
+    "ReplacementContent": "{ brand: 'Audi', model: 'Q5', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.UR7tTtGoisyCyAvvrM427QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 73,
+    "EndLine": 73,
+    "TargetContent": "{ brand: 'Audi', model: 'A3', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Audi+A3' },",
+    "ReplacementContent": "{ brand: 'Audi', model: 'A3', category: 'city', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.mB-ltek4rVi1LR0-2Cao4wHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 74,
+    "EndLine": 74,
+    "TargetContent": "{ brand: 'Audi', model: 'A4', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Audi+A4' },",
+    "ReplacementContent": "{ brand: 'Audi', model: 'A4', category: 'sedan', imageUrl: 'https://www.motortrend.com/uploads/2023/08/2-2024-Audi-A4-front-view.jpg' },"
+  },
+  {
+    "StartLine": 75,
+    "EndLine": 75,
+    "TargetContent": "{ brand: 'Audi', model: 'Q2', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Audi+Q2' },",
+    "ReplacementContent": "{ brand: 'Audi', model: 'Q2', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.fa5b81b110d3153064461bbb7d8df502?rik=QqKrUafPqcPb3g&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 76,
+    "EndLine": 76,
+    "TargetContent": "{ brand: 'Audi', model: 'Q8', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Audi+Q8' },",
+    "ReplacementContent": "{ brand: 'Audi', model: 'Q8', category: 'suv', imageUrl: 'https://www.carscoops.com/wp-content/uploads/2018/10/3adcf6e2-audi-q8-50-tdi-quattro-by-abt-0.jpg' },"
+  },
+  {
+    "StartLine": 77,
+    "EndLine": 77,
+    "TargetContent": "{ brand: 'Audi', model: 'e-tron', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Audi+e-tron' },",
+    "ReplacementContent": "{ brand: 'Audi', model: 'e-tron', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.7c4de6a5b84d42163eea3e0e0c4d7f77?rik=FiZITDosomjk%2fA&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 80,
+    "EndLine": 80,
+    "TargetContent": "{ brand: 'Skoda', model: 'Octavia', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Skoda+Octavia' },",
+    "ReplacementContent": "{ brand: 'Skoda', model: 'Octavia', category: 'sedan', imageUrl: 'https://ev-database.org/img/auto/Audi_e-tron/Audi_e-tron-01@2x.jpg' },"
+  },
+  {
+    "StartLine": 81,
+    "EndLine": 81,
+    "TargetContent": "{ brand: 'Skoda', model: 'Kodiaq', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Skoda+Kodiaq' },",
+    "ReplacementContent": "{ brand: 'Skoda', model: 'Kodiaq', category: 'suv', imageUrl: 'https://cdn.motor1.com/images/mgl/6ZNmGX/s1/skoda-octavia-2024.jpg' },"
+  },
+  {
+    "StartLine": 82,
+    "EndLine": 82,
+    "TargetContent": "{ brand: 'Skoda', model: 'Fabia', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Skoda+Fabia' },",
+    "ReplacementContent": "{ brand: 'Skoda', model: 'Fabia', category: 'city', imageUrl: 'https://assets.adac.de/image/upload/v1/Autodatenbank/Fahrzeugbilder/im06339-1-skoda-kodiaq.jpg' },"
+  },
+  {
+    "StartLine": 83,
+    "EndLine": 83,
+    "TargetContent": "{ brand: 'Skoda', model: 'Karoq', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Skoda+Karoq' },",
+    "ReplacementContent": "{ brand: 'Skoda', model: 'Karoq', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.xtPV8dsIHrzkQHwJMzV3ZAHaEL?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 84,
+    "EndLine": 84,
+    "TargetContent": "{ brand: 'Skoda', model: 'Superb', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Skoda+Superb' },",
+    "ReplacementContent": "{ brand: 'Skoda', model: 'Superb', category: 'sedan', imageUrl: 'https://cdn.motor1.com/images/mgl/8AnpX3/s1/2022-skoda-karoq-style.jpg' },"
+  },
+  {
+    "StartLine": 85,
+    "EndLine": 85,
+    "TargetContent": "{ brand: 'Skoda', model: 'Kamiq', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Skoda+Kamiq' },",
+    "ReplacementContent": "{ brand: 'Skoda', model: 'Kamiq', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.UIiOF7hkEFzcjWQFDDcPMgHaEK?w=1920&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 86,
+    "EndLine": 86,
+    "TargetContent": "{ brand: 'Skoda', model: 'Scala', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Skoda+Scala' },",
+    "ReplacementContent": "{ brand: 'Skoda', model: 'Scala', category: 'city', imageUrl: 'https://cdn.skoda-storyboard.com/2023/07/header_Kamiq_7917a803.webp' },"
+  },
+  {
+    "StartLine": 89,
+    "EndLine": 89,
+    "TargetContent": "{ brand: 'Seat', model: 'Ibiza', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Seat+Ibiza' },",
+    "ReplacementContent": "{ brand: 'Seat', model: 'Ibiza', category: 'city', imageUrl: 'https://images.prismic.io/carwow/723b1d0c-0ddf-4790-a784-704014a72fe9_RHD+Skoda+Scala+Exterior+1.jpg' },"
+  },
+  {
+    "StartLine": 90,
+    "EndLine": 90,
+    "TargetContent": "{ brand: 'Seat', model: 'Leon', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Seat+Leon' },",
+    "ReplacementContent": "{ brand: 'Seat', model: 'Leon', category: 'city', imageUrl: 'https://www.seat.com/content/dam/public/seat-website/carworlds/new-cw-ibiza/overview/version-view/ibiza-reference/seat-ibiza-reference-colour-candy-white.png' },"
+  },
+  {
+    "StartLine": 91,
+    "EndLine": 91,
+    "TargetContent": "{ brand: 'Seat', model: 'Ateca', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Seat+Ateca' },",
+    "ReplacementContent": "{ brand: 'Seat', model: 'Ateca', category: 'suv', imageUrl: 'https://www.seat.de/content/dam/public/seat-website/myco/2425/carworlds/leon/fr/header-version/seat-leon-5d-fr-trim-desire-red-colour-alloy-wheels.png' },"
+  },
+  {
+    "StartLine": 92,
+    "EndLine": 92,
+    "TargetContent": "{ brand: 'Seat', model: 'Arona', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Seat+Arona' },",
+    "ReplacementContent": "{ brand: 'Seat', model: 'Arona', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.YufAOLH_InM1cLm0PKyppQHaDy?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 93,
+    "EndLine": 93,
+    "TargetContent": "{ brand: 'Seat', model: 'Tarraco', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Seat+Tarraco' },",
+    "ReplacementContent": "{ brand: 'Seat', model: 'Tarraco', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.6er6JFhygnEDpWltT1w_DwHaDq?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 94,
+    "EndLine": 94,
+    "TargetContent": "{ brand: 'Cupra', model: 'Formentor', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Cupra+Formentor' },",
+    "ReplacementContent": "{ brand: 'Cupra', model: 'Formentor', category: 'suv', imageUrl: 'https://cdn.motor1.com/images/mgl/YK24y/s1/2019-cupra-formentor-concept.jpg' },"
+  },
+  {
+    "StartLine": 97,
+    "EndLine": 97,
+    "TargetContent": "{ brand: 'Hyundai', model: 'Tucson', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Hyundai+Tucson' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'Tucson', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.d03792212bc3028f2678fbc01bbdfeda?rik=166rEZAd9gftdg&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 98,
+    "EndLine": 98,
+    "TargetContent": "{ brand: 'Hyundai', model: 'Accent', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Hyundai+Accent' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'Accent', category: 'sedan', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.XuxPoiqK2ZjnygpisaBn5QHaE4?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 99,
+    "EndLine": 99,
+    "TargetContent": "{ brand: 'Hyundai', model: 'i10', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Hyundai+i10' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'i10', category: 'city', imageUrl: 'https://media.whatcar.com/wc-image/2023-09/hyundai-i10-front-right-static.jpg' },"
+  },
+  {
+    "StartLine": 100,
+    "EndLine": 100,
+    "TargetContent": "{ brand: 'Hyundai', model: 'i20', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Hyundai+i20' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'i20', category: 'city', imageUrl: 'https://image-prod.iol.co.za/16x9/800/Hyundai-i20-N-Line-Picture-Supplied?source=https://iol-prod.appspot.com/image/cf2e82aa2264f2212b198d1bcdb172ba49d25f8a/2000&operation=CROP&offset=0x1&resize=2000x1125' },"
+  },
+  {
+    "StartLine": 101,
+    "EndLine": 101,
+    "TargetContent": "{ brand: 'Hyundai', model: 'Creta', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Hyundai+Creta' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'Creta', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.5ttFnIvP69IGav7iPQsczwHaE_?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 102,
+    "EndLine": 102,
+    "TargetContent": "{ brand: 'Hyundai', model: 'Santa Fe', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Hyundai+Santa+Fe' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'Santa Fe', category: 'suv', imageUrl: 'https://tse3.mm.bing.net/th/id/OIP.Ta-5t2BPHjgMvpL_cdjBHQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 103,
+    "EndLine": 103,
+    "TargetContent": "{ brand: 'Hyundai', model: 'H100', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Hyundai+H100' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'H100', category: 'utility', imageUrl: 'https://www.hyundai.com/content/dam/hyundai/template_en/en/images/find-a-car/pip/h-100-2020/exterior/h-100-pe2-design-left-front-view-white-pc.jpg' },"
+  },
+  {
+    "StartLine": 104,
+    "EndLine": 104,
+    "TargetContent": "{ brand: 'Hyundai', model: 'Elantra', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Hyundai+Elantra' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'Elantra', category: 'sedan', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.C1iU6tgAGeWlfLBtpEnh4gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 105,
+    "EndLine": 105,
+    "TargetContent": "{ brand: 'Hyundai', model: 'Kona', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Hyundai+Kona' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'Kona', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.P3L8ia5YS6QjmA67swd7rgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 106,
+    "EndLine": 106,
+    "TargetContent": "{ brand: 'Hyundai', model: 'Ioniq 5', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Hyundai+Ioniq+5' },",
+    "ReplacementContent": "{ brand: 'Hyundai', model: 'Ioniq 5', category: 'suv', imageUrl: 'https://tse3.mm.bing.net/th/id/OIP.kzvQyGv6m5Natn64WtBSCgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 109,
+    "EndLine": 109,
+    "TargetContent": "{ brand: 'Kia', model: 'Sportage', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Kia+Sportage' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'Sportage', category: 'suv', imageUrl: 'https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/sportage/my26/discover/kia-sportage-hev-gtl-my26-1920x1080.png' },"
+  },
+  {
+    "StartLine": 110,
+    "EndLine": 110,
+    "TargetContent": "{ brand: 'Kia', model: 'Picanto', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Kia+Picanto' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'Picanto', category: 'city', imageUrl: 'https://assets-eu-01.kc-usercontent.com/3b3d460e-c5ae-0195-6b86-3ac7fb9d52db/ae310208-5a3c-4fd1-ad44-dea92d9a380b/Kia_Picanto_FL_6.jpg' },"
+  },
+  {
+    "StartLine": 111,
+    "EndLine": 111,
+    "TargetContent": "{ brand: 'Kia', model: 'Rio', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Kia+Rio' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'Rio', category: 'city', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.iDWf3XRKZLb7Jbzue70TsgHaEc?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 112,
+    "EndLine": 112,
+    "TargetContent": "{ brand: 'Kia', model: 'Sorento', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Kia+Sorento' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'Sorento', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.2K1eMCl5vfDqcKs5nvVGRwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 113,
+    "EndLine": 113,
+    "TargetContent": "{ brand: 'Kia', model: 'Niro', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Kia+Niro' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'Niro', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.t8jNbF-KIODpsxZfBytftAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 114,
+    "EndLine": 114,
+    "TargetContent": "{ brand: 'Kia', model: 'Stonic', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Kia+Stonic' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'Stonic', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.oQ7j_21lXBHQQ-cuMGrkRwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 115,
+    "EndLine": 115,
+    "TargetContent": "{ brand: 'Kia', model: 'K2500', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Kia+K2500' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'K2500', category: 'utility', imageUrl: 'https://th.bing.com/th/id/R.74deef966df9584af1ff7e2eb2de067b?rik=Eqbi4XV%2fivAo6Q&riu=http%3a%2f%2fgomotors.net%2fpics%2fKia%2fkia-k2500-01.jpg&ehk=rz%2f0keKWjvSYmp9eWT65mOTz2KCzMqa3cLKM3iPbq4k%3d&risl=&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 116,
+    "EndLine": 116,
+    "TargetContent": "{ brand: 'Kia', model: 'Ceed', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Kia+Ceed' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'Ceed', category: 'city', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.jzqTp61I7fxKOyIax0ONPgHaEv?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 117,
+    "EndLine": 117,
+    "TargetContent": "{ brand: 'Kia', model: 'EV6', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Kia+EV6' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'EV6', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.ZP088Rw-tTmthSmYc9jkZQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 118,
+    "EndLine": 118,
+    "TargetContent": "{ brand: 'Kia', model: 'Sonet', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Kia+Sonet' },",
+    "ReplacementContent": "{ brand: 'Kia', model: 'Sonet', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.fSyMzVgseB0romsePgTm4QHaEj?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 121,
+    "EndLine": 121,
+    "TargetContent": "{ brand: 'Toyota', model: 'Hilux', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Toyota+Hilux' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'Hilux', category: 'utility', imageUrl: 'https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/1280x1280/zip/gb/configurationtype/visual-for-grade-selector/product-token/b4b18d46-7f55-494a-a10a-da4beff7d42b/grade/ba7bd29c-20fc-4230-896f-b415d7f30f53/body/f880e881-f794-4aef-9e12-db540db6d76d/fallback/true/padding/50,50,50,50/image-quality/70/day-exterior-4_4R8.png' },"
+  },
+  {
+    "StartLine": 122,
+    "EndLine": 122,
+    "TargetContent": "{ brand: 'Toyota', model: 'Yaris', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Toyota+Yaris' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'Yaris', category: 'city', imageUrl: 'https://th.bing.com/th/id/R.f0daa377e2f83f8b64197b96a164f079?rik=9SPxX3DnIblz8Q&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 123,
+    "EndLine": 123,
+    "TargetContent": "{ brand: 'Toyota', model: 'Yaris Cross', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Toyota+Yaris+Cross' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'Yaris Cross', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.l9VCJ88L4nRHva9tk8oRnQHaEX?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 124,
+    "EndLine": 124,
+    "TargetContent": "{ brand: 'Toyota', model: 'Corolla', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Toyota+Corolla' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'Corolla', category: 'sedan', imageUrl: 'https://cdn.motor1.com/images/mgl/bgmN9m/s1/2024-toyota-gr-corolla-circuit-edition-blue-flame.jpg' },"
+  },
+  {
+    "StartLine": 125,
+    "EndLine": 125,
+    "TargetContent": "{ brand: 'Toyota', model: 'Corolla Cross', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Toyota+Corolla+Cross' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'Corolla Cross', category: 'suv', imageUrl: 'https://static1.topspeedimages.com/wordpress/wp-content/uploads/2024/09/2024-toyota-corolla-cross-hybrid-xse-acidic-blast.jpg' },"
+  },
+  {
+    "StartLine": 126,
+    "EndLine": 126,
+    "TargetContent": "{ brand: 'Toyota', model: 'RAV4', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Toyota+RAV4' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'RAV4', category: 'suv', imageUrl: 'https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/1280x1280/zip/gb/configurationtype/visual-for-grade-selector/product-token/fefefc65-91ff-48d2-870c-8bc60befcd2f/grade/051a2705-0530-4d39-9aa3-cd2a73ce13f5/body/30b0ef55-504f-4ce5-8f54-6856b2e8aa20/fallback/true/padding/50,50,50,50/image-quality/70/day-exterior-4.png' },"
+  },
+  {
+    "StartLine": 127,
+    "EndLine": 127,
+    "TargetContent": "{ brand: 'Toyota', model: 'Land Cruiser', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Toyota+Land+Cruiser' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'Land Cruiser', category: 'suv', imageUrl: 'https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/1280x1280/zip/ie/configurationtype/visual-for-grade-selector/product-token/7d82310a-07ce-4807-a167-3056c99e7a50/grade/32a982e2-7d17-4cdf-9e34-48f5d3e25520/body/b718c321-78ab-417d-af59-ccedefd02910/fallback/true/padding/50,50,50,50/image-quality/70/day-exterior-4.png' },"
+  },
+  {
+    "StartLine": 128,
+    "EndLine": 128,
+    "TargetContent": "{ brand: 'Toyota', model: 'C-HR', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Toyota+C-HR' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'C-HR', category: 'suv', imageUrl: 'https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/1280x1280/zip/gb/configurationtype/visual-for-grade-selector/product-token/cdf10c99-f600-4c62-bc16-b60fdaf31852/grade/345f7940-0acd-4773-a403-65b99addc94d/body/30b0ef55-504f-4ce5-8f54-6856b2e8aa20/fallback/true/padding/50,50,50,50/image-quality/70/day-exterior-4.png' },"
+  },
+  {
+    "StartLine": 129,
+    "EndLine": 129,
+    "TargetContent": "{ brand: 'Toyota', model: 'Proace', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Toyota+Proace' },",
+    "ReplacementContent": "{ brand: 'Toyota', model: 'Proace', category: 'utility', imageUrl: 'https://cdn.motor1.com/images/mgl/kPA1e/s1/toyota-proace-city.jpg' },"
+  },
+  {
+    "StartLine": 130,
+    "EndLine": 130,
+    "TargetContent": "{ brand: 'Suzuki', model: 'Swift', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Suzuki+Swift' },",
+    "ReplacementContent": "{ brand: 'Suzuki', model: 'Swift', category: 'city', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.iU35e9_5IQH-RADhSfU1wAHaGI?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 131,
+    "EndLine": 131,
+    "TargetContent": "{ brand: 'Suzuki', model: 'Vitara', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Suzuki+Vitara' },",
+    "ReplacementContent": "{ brand: 'Suzuki', model: 'Vitara', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.00jIsMO_xPHCk1hmwixh0QHaFD?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 132,
+    "EndLine": 132,
+    "TargetContent": "{ brand: 'Suzuki', model: 'Jimny', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Suzuki+Jimny' },",
+    "ReplacementContent": "{ brand: 'Suzuki', model: 'Jimny', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.a1ab9af0f8a49e52b3af5b64f3cc4193?rik=5ctJBLev5vHYxw&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 133,
+    "EndLine": 133,
+    "TargetContent": "{ brand: 'Suzuki', model: 'Celerio', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Suzuki+Celerio' },",
+    "ReplacementContent": "{ brand: 'Suzuki', model: 'Celerio', category: 'city', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.lQzlwQRwJXU5BFZNaAEv0wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 134,
+    "EndLine": 134,
+    "TargetContent": "{ brand: 'Suzuki', model: 'Dzire', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Suzuki+Dzire' },",
+    "ReplacementContent": "{ brand: 'Suzuki', model: 'Dzire', category: 'sedan', imageUrl: 'https://expatautocm.com/wp-content/uploads/2023/05/Suzuki-Celerio-VHT617.jpg' },"
+  },
+  {
+    "StartLine": 135,
+    "EndLine": 135,
+    "TargetContent": "{ brand: 'Nissan', model: 'Qashqai', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Nissan+Qashqai' },",
+    "ReplacementContent": "{ brand: 'Nissan', model: 'Qashqai', category: 'suv', imageUrl: 'https://tse3.mm.bing.net/th/id/OIP.t2vEAwrVpow0MujR9uNSWQHaE6?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 136,
+    "EndLine": 136,
+    "TargetContent": "{ brand: 'Nissan', model: 'Juke', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Nissan+Juke' },",
+    "ReplacementContent": "{ brand: 'Nissan', model: 'Juke', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.WxLVyNIsb1IIbZUj2E2NTgHaEo?w=1200&h=750&rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 137,
+    "EndLine": 137,
+    "TargetContent": "{ brand: 'Nissan', model: 'Navara', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Nissan+Navara' },",
+    "ReplacementContent": "{ brand: 'Nissan', model: 'Navara', category: 'utility', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.xjmu68PrpBXSanogSPcJpwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 138,
+    "EndLine": 138,
+    "TargetContent": "{ brand: 'Nissan', model: 'X-Trail', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Nissan+X-Trail' },",
+    "ReplacementContent": "{ brand: 'Nissan', model: 'X-Trail', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.HTJiX9NYxnvxvzmf5q9K0QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 139,
+    "EndLine": 139,
+    "TargetContent": "{ brand: 'Nissan', model: 'Micra', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Nissan+Micra' },",
+    "ReplacementContent": "{ brand: 'Nissan', model: 'Micra', category: 'city', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.bYjc_ajRt-D-YHXsP2DLKgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 140,
+    "EndLine": 140,
+    "TargetContent": "{ brand: 'Honda', model: 'CR-V', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Honda+CR-V' },",
+    "ReplacementContent": "{ brand: 'Honda', model: 'CR-V', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.HcrixvKQ60omnXbsEcIviQHaEc?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 141,
+    "EndLine": 141,
+    "TargetContent": "{ brand: 'Honda', model: 'HR-V', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Honda+HR-V' },",
+    "ReplacementContent": "{ brand: 'Honda', model: 'HR-V', category: 'suv', imageUrl: 'https://tse3.mm.bing.net/th/id/OIP.Cd4BNI2J4XDaod_WgYZ9SgHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 142,
+    "EndLine": 142,
+    "TargetContent": "{ brand: 'Honda', model: 'Civic', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Honda+Civic' },",
+    "ReplacementContent": "{ brand: 'Honda', model: 'Civic', category: 'sedan', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.ERtSS_hgR1-M2iyt-axjVgHaED?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 143,
+    "EndLine": 143,
+    "TargetContent": "{ brand: 'Mazda', model: '3', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Mazda+3' },",
+    "ReplacementContent": "{ brand: 'Mazda', model: '3', category: 'sedan', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.ksH6h4rEx7LJ9jM7vcaVJAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 144,
+    "EndLine": 144,
+    "TargetContent": "{ brand: 'Mazda', model: 'CX-5', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Mazda+CX-5' },",
+    "ReplacementContent": "{ brand: 'Mazda', model: 'CX-5', category: 'suv', imageUrl: 'https://www.motortrend.com/uploads/2022/11/2023-Mazda-Mazda3-Sedan-AWD-Turbo-exterior-29.jpeg' },"
+  },
+  {
+    "StartLine": 145,
+    "EndLine": 145,
+    "TargetContent": "{ brand: 'Mazda', model: 'CX-30', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Mazda+CX-30' },",
+    "ReplacementContent": "{ brand: 'Mazda', model: 'CX-30', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.gAdStY97IspucywZUS7i7gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 146,
+    "EndLine": 146,
+    "TargetContent": "{ brand: 'Mitsubishi', model: 'L200', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Mitsubishi+L200' },",
+    "ReplacementContent": "{ brand: 'Mitsubishi', model: 'L200', category: 'utility', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.1_BY550UhFdeGP_GQZVhyQEsDI?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 149,
+    "EndLine": 149,
+    "TargetContent": "{ brand: 'BYD', model: 'Atto 3', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=BYD+Atto+3' },",
+    "ReplacementContent": "{ brand: 'BYD', model: 'Atto 3', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.ec6250824079c3ce1b9d9fe43553f404?rik=NkBQoUy%2frON%2bww&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 150,
+    "EndLine": 150,
+    "TargetContent": "{ brand: 'BYD', model: 'Dolphin', category: 'city', imageUrl: 'https://placehold.co/600x400?text=BYD+Dolphin' },",
+    "ReplacementContent": "{ brand: 'BYD', model: 'Dolphin', category: 'city', imageUrl: 'https://parkers-images.bauersecure.com/pagefiles/267101/l200-towing-2018-01.jpg' },"
+  },
+  {
+    "StartLine": 151,
+    "EndLine": 151,
+    "TargetContent": "{ brand: 'BYD', model: 'Seal', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=BYD+Seal' },",
+    "ReplacementContent": "{ brand: 'BYD', model: 'Seal', category: 'sedan', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP._Y3oV2ODgguIS0gTWAsIZQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 152,
+    "EndLine": 152,
+    "TargetContent": "{ brand: 'BYD', model: 'Han', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=BYD+Han' },",
+    "ReplacementContent": "{ brand: 'BYD', model: 'Han', category: 'sedan', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.29yIcBnU2DHUoPfyptnnIwHaEe?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 153,
+    "EndLine": 153,
+    "TargetContent": "{ brand: 'MG', model: 'MG 3', category: 'city', imageUrl: 'https://placehold.co/600x400?text=MG+3' },",
+    "ReplacementContent": "{ brand: 'MG', model: 'MG 3', category: 'city', imageUrl: 'https://www.byd.com/content/dam/byd-site/eu/product/seal/pc/section03.jpg' },"
+  },
+  {
+    "StartLine": 154,
+    "EndLine": 154,
+    "TargetContent": "{ brand: 'MG', model: 'ZS', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=MG+ZS' },",
+    "ReplacementContent": "{ brand: 'MG', model: 'ZS', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.2qYVfpebgIhfM0Ic3bFSoAHaET?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 155,
+    "EndLine": 155,
+    "TargetContent": "{ brand: 'MG', model: 'HS', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=MG+HS' },",
+    "ReplacementContent": "{ brand: 'MG', model: 'HS', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.bKA_Rz3l1BHQRFlZe6SxVQHaEh?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 153,
+    "EndLine": 153,
+    "TargetContent": "{ brand: 'MG', model: 'MG 3', category: 'city', imageUrl: 'https://placehold.co/600x400?text=MG+3' },",
+    "ReplacementContent": "{ brand: 'MG', model: 'MG 3', category: 'city', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.ZJuqRcVM45xezaDVxNJ_agHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 157,
+    "EndLine": 157,
+    "TargetContent": "{ brand: 'Chery', model: 'Tiggo 2 Pro', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Chery+Tiggo+2+Pro' },",
+    "ReplacementContent": "{ brand: 'Chery', model: 'Tiggo 2 Pro', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.Uahe2QfJfEU9_M6QmWO-bgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 158,
+    "EndLine": 158,
+    "TargetContent": "{ brand: 'Chery', model: 'Tiggo 7 Pro', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Chery+Tiggo+7+Pro' },",
+    "ReplacementContent": "{ brand: 'Chery', model: 'Tiggo 7 Pro', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.D7mmJUu9Vz3dh7IgiGD-7QHaDe?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 159,
+    "EndLine": 159,
+    "TargetContent": "{ brand: 'Chery', model: 'Tiggo 8 Pro', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Chery+Tiggo+8+Pro' },",
+    "ReplacementContent": "{ brand: 'Chery', model: 'Tiggo 8 Pro', category: 'suv', imageUrl: 'https://dhteemohy7ejo.cloudfront.net/web/modelos/tiggo-2-pro/77931-tiggo2pro-negro.png' },"
+  },
+  {
+    "StartLine": 160,
+    "EndLine": 160,
+    "TargetContent": "{ brand: 'Omoda', model: '5', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Omoda+5' },",
+    "ReplacementContent": "{ brand: 'Omoda', model: '5', category: 'suv', imageUrl: 'https://www.log.com.tr/wp-content/uploads/2022/12/chery-tiggo-7-pro.jpg' },"
+  },
+  {
+    "StartLine": 161,
+    "EndLine": 161,
+    "TargetContent": "{ brand: 'Jaecoo', model: '7', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Jaecoo+7' },",
+    "ReplacementContent": "{ brand: 'Jaecoo', model: '7', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.ZjWFs0y_zjkr32Zla_0DMQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 162,
+    "EndLine": 162,
+    "TargetContent": "{ brand: 'Geely', model: 'Coolray', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Geely+Coolray' },",
+    "ReplacementContent": "{ brand: 'Geely', model: 'Coolray', category: 'suv', imageUrl: 'https://images.prismic.io/carwow/ZtBeX0aF0TcGJgts_omoda-5-2024-rhd-front34static.jpg' },"
+  },
+  {
+    "StartLine": 163,
+    "EndLine": 163,
+    "TargetContent": "{ brand: 'Geely', model: 'Azkarra', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Geely+Azkarra' },",
+    "ReplacementContent": "{ brand: 'Geely', model: 'Azkarra', category: 'suv', imageUrl: 'https://web21st.imgix.net/assets/images/new-vehicles/jaecoo/jaecoo-7-2024.png' },"
+  },
+  {
+    "StartLine": 164,
+    "EndLine": 164,
+    "TargetContent": "{ brand: 'Haval', model: 'Jolion', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Haval+Jolion' },",
+    "ReplacementContent": "{ brand: 'Haval', model: 'Jolion', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.sF5qpRtPQzp0Vl7VEEjZ4wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 165,
+    "EndLine": 165,
+    "TargetContent": "{ brand: 'Haval', model: 'H6', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Haval+H6' },",
+    "ReplacementContent": "{ brand: 'Haval', model: 'H6', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.myJJZWidDe1hJsl9XXJDjAHaEv?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 166,
+    "EndLine": 166,
+    "TargetContent": "{ brand: 'DFSK', model: 'Glory 500', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=DFSK+Glory+500' },",
+    "ReplacementContent": "{ brand: 'DFSK', model: 'Glory 500', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.s4LeXkLJqUgvui8LZJUoYwHaEo?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 167,
+    "EndLine": 167,
+    "TargetContent": "{ brand: 'DFSK', model: 'Seres 3', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=DFSK+Seres+3' },",
+    "ReplacementContent": "{ brand: 'DFSK', model: 'Seres 3', category: 'suv', imageUrl: 'https://galerie.automobile.tn/max/2021/11/mercedes-benz-classe-c-180-eq-boost-9g-tronic-amg-exterieur-60811.jpg' },"
+  },
+  {
+    "StartLine": 168,
+    "EndLine": 168,
+    "TargetContent": "{ brand: 'Jetour', model: 'X70', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Jetour+X70' },",
+    "ReplacementContent": "{ brand: 'Jetour', model: 'X70', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.4W4X_1nlDbzcoiCcs24S6wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 169,
+    "EndLine": 169,
+    "TargetContent": "{ brand: 'Exeed', model: 'RX', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Exeed+RX' },",
+    "ReplacementContent": "{ brand: 'Exeed', model: 'RX', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.15f284e335750e87d1de35227288f406?rik=sIm6X%2fwcjLr41w&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 170,
+    "EndLine": 170,
+    "TargetContent": "{ brand: 'Baic', model: 'X35', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Baic+X35' },",
+    "ReplacementContent": "{ brand: 'Baic', model: 'X35', category: 'suv', imageUrl: 'https://tse3.mm.bing.net/th/id/OIP.uiH3exX3iZ_GEwu89xOQnwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 171,
+    "EndLine": 171,
+    "TargetContent": "{ brand: 'Changan', model: 'CS35', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Changan+CS35' },",
+    "ReplacementContent": "{ brand: 'Changan', model: 'CS35', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.kVFRYHtc62EZ1GWMciXBmgHaEo?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 174,
+    "EndLine": 174,
+    "TargetContent": "{ brand: 'Mercedes-Benz', model: 'Classe E', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Mercedes-Benz+Classe+E' },",
+    "ReplacementContent": "{ brand: 'Mercedes-Benz', model: 'Classe E', category: 'sedan', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.31-u-DNxXiJxI3OSmGuUYwHaE6?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 175,
+    "EndLine": 175,
+    "TargetContent": "{ brand: 'Mercedes-Benz', model: 'Classe C', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Mercedes-Benz+Classe+C' },",
+    "ReplacementContent": "{ brand: 'Mercedes-Benz', model: 'Classe C', category: 'sedan', imageUrl: 'https://th.bing.com/th/id/OIP.FZL4yceXITw8pBmGkSgDDAHaEo?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 176,
+    "EndLine": 176,
+    "TargetContent": "{ brand: 'Mercedes-Benz', model: 'Classe A', category: 'city', imageUrl: 'https://placehold.co/600x400?text=Mercedes-Benz+Classe+A' },",
+    "ReplacementContent": "{ brand: 'Mercedes-Benz', model: 'Classe A', category: 'city', imageUrl: 'https://th.bing.com/th/id/R.597898e7946a8dc95a4595557bdb1205?rik=UV4UFEVCY2IRHA&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 177,
+    "EndLine": 177,
+    "TargetContent": "{ brand: 'Mercedes-Benz', model: 'GLC', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Mercedes-Benz+GLC' },",
+    "ReplacementContent": "{ brand: 'Mercedes-Benz', model: 'GLC', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.LoqpTJL0W_rJRtVwVNK5TAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 178,
+    "EndLine": 178,
+    "TargetContent": "{ brand: 'Mercedes-Benz', model: 'GLA', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Mercedes-Benz+GLA' },",
+    "ReplacementContent": "{ brand: 'Mercedes-Benz', model: 'GLA', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.ywOpj3sAjPYgId29t0ScnAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 179,
+    "EndLine": 179,
+    "TargetContent": "{ brand: 'Mercedes-Benz', model: 'GLE', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Mercedes-Benz+GLE' },",
+    "ReplacementContent": "{ brand: 'Mercedes-Benz', model: 'GLE', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.abc138f0c2921370aee079a6e24cdbdd?rik=PxxItSCvehSNvw&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 180,
+    "EndLine": 180,
+    "TargetContent": "{ brand: 'Mercedes-Benz', model: 'Sprinter', category: 'utility', imageUrl: 'https://placehold.co/600x400?text=Mercedes-Benz+Sprinter' },",
+    "ReplacementContent": "{ brand: 'Mercedes-Benz', model: 'Sprinter', category: 'utility', imageUrl: 'https://cdn.bmwblog.com/wp-content/uploads/2023/02/2024-bmw-x5-facelift-00.jpg' },"
+  },
+  {
+    "StartLine": 181,
+    "EndLine": 181,
+    "TargetContent": "{ brand: 'Mercedes-Benz', model: 'Classe S', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=Mercedes-Benz+Classe+S' },",
+    "ReplacementContent": "{ brand: 'Mercedes-Benz', model: 'Classe S', category: 'sedan', imageUrl: 'https://th.bing.com/th/id/R.beacb52fa4a9ccc58cb4d611cf078204?rik=srCd39lJqknCOA&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 182,
+    "EndLine": 182,
+    "TargetContent": "{ brand: 'BMW', model: 'Série 5', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=BMW+Série+5' },",
+    "ReplacementContent": "{ brand: 'BMW', model: 'Série 5', category: 'sedan', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.UD8QHL1ZrXHm6I9QK8vkjAHaEm?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 183,
+    "EndLine": 183,
+    "TargetContent": "{ brand: 'BMW', model: 'Série 3', category: 'sedan', imageUrl: 'https://placehold.co/600x400?text=BMW+Série+3' },",
+    "ReplacementContent": "{ brand: 'BMW', model: 'Série 3', category: 'sedan', imageUrl: 'https://th.bing.com/th/id/R.4533c4b22e751bea1bf4469f0f842445?rik=VRYCLpdDuG1S9Q&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 184,
+    "EndLine": 184,
+    "TargetContent": "{ brand: 'BMW', model: 'X1', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=BMW+X1' },",
+    "ReplacementContent": "{ brand: 'BMW', model: 'X1', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.c60e2ec88bd3ed22521f254c5fceecc4?rik=1FF5E5OvXw1nZg&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 185,
+    "EndLine": 185,
+    "TargetContent": "{ brand: 'BMW', model: 'X3', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=BMW+X3' },",
+    "ReplacementContent": "{ brand: 'BMW', model: 'X3', category: 'suv', imageUrl: 'https://tse4.mm.bing.net/th/id/OIP.Fxgxe92iCr9WQ-dC0qnGHQHaD3?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 186,
+    "EndLine": 186,
+    "TargetContent": "{ brand: 'BMW', model: 'X5', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=BMW+X5' },",
+    "ReplacementContent": "{ brand: 'BMW', model: 'X5', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.ROELoj9JxlNLBUa3rBSl1AHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 187,
+    "EndLine": 187,
+    "TargetContent": "{ brand: 'BMW', model: 'Série 1', category: 'city', imageUrl: 'https://placehold.co/600x400?text=BMW+Série+1' },",
+    "ReplacementContent": "{ brand: 'BMW', model: 'Série 1', category: 'city', imageUrl: 'https://th.bing.com/th/id/R.5653a0b13aa3535c7ec0bc90122a43bd?rik=v2LEFgGcnU3O%2bA&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 188,
+    "EndLine": 188,
+    "TargetContent": "{ brand: 'BMW', model: 'iX', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=BMW+iX' },",
+    "ReplacementContent": "{ brand: 'BMW', model: 'iX', category: 'suv', imageUrl: 'https://cdn.motor1.com/images/mgl/bgm3W6/s1/2024-porsche-cayenne-turbo-e-hybrid-front-3-4.jpg' },"
+  },
+  {
+    "StartLine": 189,
+    "EndLine": 189,
+    "TargetContent": "{ brand: 'Land Rover', model: 'Range Rover Sport', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Range+Rover+Sport' },",
+    "ReplacementContent": "{ brand: 'Land Rover', model: 'Range Rover Sport', category: 'suv', imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.5nN-vQ0fX4Aj_ygdR59EggHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 190,
+    "EndLine": 190,
+    "TargetContent": "{ brand: 'Land Rover', model: 'Range Rover Evoque', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Range+Rover+Evoque' },",
+    "ReplacementContent": "{ brand: 'Land Rover', model: 'Range Rover Evoque', category: 'suv', imageUrl: 'https://tse3.mm.bing.net/th/id/OIP.V3nD0p-Bhf-TivgmJaYR0wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 191,
+    "EndLine": 191,
+    "TargetContent": "{ brand: 'Land Rover', model: 'Range Rover Defender', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Range+Rover+Defender' },",
+    "ReplacementContent": "{ brand: 'Land Rover', model: 'Range Rover Defender', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.sdy-nRsjvH1PvWkVsGqldgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  },
+  {
+    "StartLine": 192,
+    "EndLine": 192,
+    "TargetContent": "{ brand: 'Land Rover', model: 'Range Rover Velar', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Range+Rover+Velar' },",
+    "ReplacementContent": "{ brand: 'Land Rover', model: 'Range Rover Velar', category: 'suv', imageUrl: 'https://th.bing.com/th/id/R.0d8eb0835b72eb0280fd897a617765c7?rik=BWFKhi%2bD3YT%2bFg&pid=ImgRaw&r=0' },"
+  },
+  {
+    "StartLine": 193,
+    "EndLine": 193,
+    "TargetContent": "{ brand: 'Jaguar', model: 'F-Pace', category: 'suv', imageUrl: 'https://placehold.co/600x400?text=Jaguar+F-Pace' },",
+    "ReplacementContent": "{ brand: 'Jaguar', model: 'F-Pace', category: 'suv', imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.VsY6cCWu24ZgRxUX9aMwXgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' },"
+  }
+]

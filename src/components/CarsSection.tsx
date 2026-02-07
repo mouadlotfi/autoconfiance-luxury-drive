@@ -52,15 +52,15 @@ const CarsSection = () => {
                 setShowAll(false);
               }}
               className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-300 ${activeCategory === category.key
-                  ? 'bg-gold-gradient text-primary-foreground shadow-gold'
-                  : 'bg-secondary text-foreground hover:bg-secondary/80'
+                ? 'bg-gold-gradient text-primary-foreground shadow-gold'
+                : 'bg-secondary text-foreground hover:bg-secondary/80'
                 }`}
             >
               <category.icon className="w-5 h-5" />
               <span>{category.label}</span>
               <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${activeCategory === category.key
-                  ? 'bg-primary-foreground/20 text-primary-foreground'
-                  : 'bg-gold/10 text-gold'
+                ? 'bg-primary-foreground/20 text-primary-foreground'
+                : 'bg-gold/10 text-gold'
                 }`}>
                 {category.count}
               </span>
@@ -104,6 +104,22 @@ const CarsSection = () => {
             </Button>
           </div>
         )}
+
+        {/* WhatsApp CTA */}
+        <div className="mt-12 text-center bg-secondary/50 rounded-2xl p-8 max-w-2xl mx-auto border border-gold/10">
+          <p className="text-lg text-muted-foreground mb-4">
+            Vous ne trouvez pas ce que vous cherchez ? Nous avons plus de véhicules en stock.
+          </p>
+          <Button
+            variant="gold"
+            size="lg"
+            className="gap-2"
+            onClick={() => window.open('https://wa.me/212661299420', '_blank')}
+          >
+            <span className="font-semibold">Contactez-nous sur WhatsApp</span>
+          </Button>
+        </div>
+
       </div>
     </section>
   );

@@ -3,6 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
+
+
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,7 +53,6 @@ const Header = () => {
     if (href === '/') return location.pathname === '/';
     return location.pathname.startsWith(href.split('?')[0]);
   };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
@@ -62,9 +64,6 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gold-gradient rounded-full flex items-center justify-center shadow-gold group-hover:scale-105 transition-transform duration-300">
-              <span className="font-serif text-lg font-bold text-primary-foreground">A</span>
-            </div>
             <div>
               <span className="font-serif text-xl font-bold text-foreground tracking-tight">
                 AUTO<span className="text-gold-gradient">CONFIANCE</span>
@@ -116,7 +115,6 @@ const Header = () => {
               <Phone className="w-4 h-4 text-gold" />
               <span>+212 661-299420</span>
             </a>
-
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -165,7 +163,6 @@ const Header = () => {
                 <Phone className="w-4 h-4 text-gold" />
                 <span>+212 661-299420</span>
               </div>
-
             </nav>
           </div>
         )}
