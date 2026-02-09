@@ -16,7 +16,18 @@ import Cars from "./pages/Cars";
 import CarDetail from "./pages/CarDetail";
 import Contact from "./pages/Contact";
 
-const queryClient = new QueryClient();
+import Admin from "./pages/Admin";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // Prevent refetch when window gains focus
+      refetchOnReconnect: false, // Prevent refetch on reconnect
+      retry: 1,
+      staleTime: 5 * 60 * 1000, // 5 minutes
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -36,6 +47,8 @@ const App = () => (
           <Route path="/cars" element={<Cars />} />
           <Route path="/cars/:id" element={<CarDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

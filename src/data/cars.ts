@@ -1,4 +1,5 @@
-import { carSeedData } from './carSeedData';
+// This file has been simplified - all car data now comes from Supabase
+// Cars are managed through the Admin panel only
 
 export interface Car {
   id: string;
@@ -17,6 +18,7 @@ export interface Car {
   mileage?: number;
   fuel?: string;
   transmission?: string;
+  _categoryId?: string; // For Supabase integration
 }
 
 export const carCategories = {
@@ -42,37 +44,10 @@ export const carCategories = {
   }
 };
 
-const descriptions = [
-  "Véhicule fiable et économique, idéal pour le marché marocain.",
-  "Excellent état, parfait pour la ville et les longs trajets.",
-  "Robuste et spacieux, prêt pour toutes vos aventures.",
-  "Maintenance facile et faible consommation.",
-  "Le choix préféré des professionnels et des familles."
-];
+// Empty array - all cars come from Supabase now
+export const cars: Car[] = [];
 
-// Generate final list from seed data
-export const cars: Car[] = carSeedData.map((seed, index) => {
-  const year = Math.floor(Math.random() * (2024 - 2012 + 1)) + 2012;
-  const mileage = Math.floor(Math.random() * 180000) + 10000;
-
-  return {
-    id: `${seed.brand.toLowerCase().replace(/\s+/g, '-')}-${seed.model.toLowerCase().replace(/\s+/g, '-')}-${index + 1}`,
-    name: `${seed.brand} ${seed.model}`,
-    brand: seed.brand,
-    model: seed.model,
-    category: seed.category,
-    description: descriptions[Math.floor(Math.random() * descriptions.length)],
-    features: ["Climatisation", "Bluetooth", "ABS", "Airbags", "Fermeture centralisée"],
-    idealFor: seed.category === 'utility' ? "Professionnels" : seed.category === 'city' ? "Ville" : "Famille",
-    comfort: "Standard",
-    usage: seed.category === 'utility' ? "Transport" : "Polyvalent",
-    image: seed.imageUrl,
-    price: undefined,
-    year: year,
-    mileage: mileage,
-    fuel: ["Diesel", "Essence"][Math.floor(Math.random() * 2)],
-    transmission: Math.random() > 0.7 ? "Automatique" : "Manuelle"
-  };
-});
-
-export const getCarById = (id: string) => cars.find(car => car.id === id);
+// Helper function for backwards compatibility
+export const getCarById = (id: string): Car | undefined => {
+  return cars.find(car => car.id === id);
+};

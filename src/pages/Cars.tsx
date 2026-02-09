@@ -1,11 +1,12 @@
 import Layout from '@/components/Layout';
 import PageHeader from '@/components/PageHeader';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { cars } from '@/data/cars';
+import { Car } from '@/data/cars';
+import { useCars, useCategories } from '@/antigravity/hooks';
 import CarCard from '@/components/CarCard';
-import { Search, SlidersHorizontal, X } from 'lucide-react';
+import { Search, SlidersHorizontal, X, Loader2 } from 'lucide-react';
 
 type CategoryKey = 'all' | 'city' | 'sedan' | 'suv';
 
@@ -13,14 +14,53 @@ const CarsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialCategory = (searchParams.get('category') as CategoryKey) || 'all';
 
+  // Fetch from Supabase
+  const { data: dbCars, isLoading: carsLoading } = useCars();
+  const { data: dbCategories, isLoading: catsLoading } = useCategories();
+
   const [activeCategory, setActiveCategory] = useState<CategoryKey>(initialCategory);
+  const [activeCategoryId, setActiveCategoryId] = useState<string | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
+  const [yearRange, setYearRange] = useState<[number, number]>([1990, new Date().getFullYear()]);
 
-  const [yearRange, setYearRange] = useState<[number, number]>([2019, 2024]);
+  // Transform DB data to UI format
+  const cars: Car[] = useMemo(() => {
+    if (!dbCars) return [];
 
-  const handleCategoryChange = (category: CategoryKey) => {
+    const transformedCars = dbCars.map(car => ({
+      id: String(car.id),
+      name: car.name,
+      brand: car.name.split(' ')[0] || 'Unknown',
+      model: car.name.split(' ').slice(1).join(' '),
+      category: 'city', // Placeholder
+      description: 'Véhicule disponible immédiatement.',
+      features: ['Climatisation', 'Bluetooth', 'GPS'],
+      idealFor: 'Tous usages',
+      comfort: 'Standard',
+      usage: 'Polyvalent',
+      image: car.image_url,
+      year: car.annee || new Date().getFullYear(),
+      mileage: car.kilometrage || 0,
+      fuel: car.carburant || 'Essence',
+      transmission: car.transmission || 'Manuelle',
+      _categoryId: car.category_id
+    } as unknown as Car));
+
+    // Deduplicate by ID (in case database has duplicates)
+    const uniqueCarsMap = new Map<string, Car>();
+    transformedCars.forEach(car => {
+      if (!uniqueCarsMap.has(car.id)) {
+        uniqueCarsMap.set(car.id, car);
+      }
+    });
+
+    return Array.from(uniqueCarsMap.values());
+  }, [dbCars]);
+
+  const handleCategoryChange = (category: CategoryKey, categoryId?: string) => {
     setActiveCategory(category);
+    setActiveCategoryId(categoryId || 'all');
     if (category === 'all') {
       searchParams.delete('category');
     } else {
@@ -32,9 +72,10 @@ const CarsPage = () => {
   const getFilteredCars = () => {
     let filtered = cars;
 
-    // Category filter
-    if (activeCategory !== 'all') {
-      filtered = filtered.filter(car => car.category === activeCategory);
+    // Category filter by ID
+    if (activeCategoryId !== 'all') {
+      // @ts-ignore
+      filtered = filtered.filter(car => car._categoryId === activeCategoryId);
     }
 
     // Search filter
@@ -46,11 +87,9 @@ const CarsPage = () => {
       );
     }
 
-
-
-    // Year filter
+    // Year filter - only apply if car has a year set
     filtered = filtered.filter(car =>
-      car.year && car.year >= yearRange[0] && car.year <= yearRange[1]
+      !car.year || (car.year >= yearRange[0] && car.year <= yearRange[1])
     );
 
     return filtered;
@@ -58,12 +97,54 @@ const CarsPage = () => {
 
   const filteredCars = getFilteredCars();
 
+  // Debug logging
+  console.log('[Cars Page Debug]');
+  console.log('DB Cars:', dbCars);
+  console.log('DB Cars length:', dbCars?.length);
+  console.log('Transformed cars:', cars);
+  console.log('Transformed cars length:', cars.length);
+  console.log('Active category ID:', activeCategoryId);
+  console.log('Filtered cars:', filteredCars);
+  console.log('Filtered cars length:', filteredCars.length);
+  console.log('Year range:', yearRange);
+
+  // Check for duplicates
+  const carIds = cars.map(c => c.id);
+  const uniqueIds = new Set(carIds);
+  console.log('Total car IDs:', carIds.length, 'Unique car IDs:', uniqueIds.size);
+  if (carIds.length !== uniqueIds.size) {
+    console.warn('⚠️ DUPLICATE CAR IDs DETECTED!');
+    console.log('Duplicate IDs:', carIds.filter((id, index) => carIds.indexOf(id) !== index));
+  }
+
   const categories = [
-    { key: 'all' as CategoryKey, label: 'Tous', count: cars.length },
-    { key: 'city' as CategoryKey, label: 'Citadines', count: cars.filter(c => c.category === 'city').length },
-    { key: 'sedan' as CategoryKey, label: 'Berlines', count: cars.filter(c => c.category === 'sedan').length },
-    { key: 'suv' as CategoryKey, label: 'SUV', count: cars.filter(c => c.category === 'suv').length },
-    { key: 'utility' as CategoryKey, label: 'Utilitaires', count: cars.filter(c => c.category === 'utility').length },
+    { key: 'all' as CategoryKey, label: 'Tous', count: cars.length, id: 'all' },
+    ...(dbCategories?.map(cat => {
+      const lowerName = cat.name.toLowerCase();
+      let label = cat.name;
+      let key: CategoryKey = 'city';
+
+      if (lowerName.includes('sedan') || lowerName.includes('berline')) {
+        label = 'Sedan';
+        key = 'sedan';
+      } else if (lowerName.includes('sport')) {
+        label = 'Sports Car';
+        key = 'sedan';
+      } else if (lowerName.includes('suv') || lowerName.includes('4x4')) {
+        label = 'SUV';
+        key = 'suv';
+      } else {
+        return null; // Skip other categories
+      }
+
+      return {
+        key,
+        label,
+        // @ts-ignore
+        count: cars.filter(c => c._categoryId === cat.id).length,
+        id: cat.id
+      };
+    }).filter(Boolean) || [])
   ];
 
   const formatPrice = (price: number) => {
@@ -73,6 +154,17 @@ const CarsPage = () => {
       maximumFractionDigits: 0,
     }).format(price);
   };
+
+
+  if (carsLoading || catsLoading) {
+    return (
+      <Layout>
+        <div className="flex justify-center items-center min-h-screen">
+          <Loader2 className="w-10 h-10 animate-spin text-gold" />
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
@@ -147,10 +239,10 @@ const CarsPage = () => {
 
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-3 mb-8">
-            {categories.map((category) => (
+            {categories.map((category: any) => (
               <button
-                key={category.key}
-                onClick={() => handleCategoryChange(category.key)}
+                key={category.id}
+                onClick={() => handleCategoryChange(category.key, category.id)}
                 className={`px-5 py-2.5 rounded-full font-medium transition-all ${activeCategory === category.key
                   ? 'bg-gold-gradient text-primary-foreground shadow-gold'
                   : 'bg-secondary text-foreground hover:bg-secondary/80'
